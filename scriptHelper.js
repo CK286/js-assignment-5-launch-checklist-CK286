@@ -21,7 +21,7 @@ function validateInput(testInput) {
     window.addEventListener("load", function() {
         let form = document.querySelector("form");
         form.addEventListener("submit", function(event) {
-            /*add if statements to validate check each field if info not valid  use event.preventDefault();
+            /*add if statements to validate check each field if info not valid  use event.preventDefault();*/
         })
     })
    
