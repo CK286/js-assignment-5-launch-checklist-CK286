@@ -23,12 +23,30 @@ function validateInput(testInput) {
         form.addEventListener("submit", function(event) {
             /*add if statements to validate check each field if info not valid
              use event.preventDefault();*/
+             if (testInput = "" ){
+                event.preventDefault();
+                return "Empty";
+
+             }else if ((isNaN(testInput)) ){
+                return "Not a Number";
+
+             } else {
+                return "Is a Number"
+             }
+
+
+
+
+
             /*let pilotNameInput = document.querySelector("input[name=pilotName]");
             let copilotNameInput = document.querySelector("input[name=copilotName]");
             let fuelLevelInput = document.querySelector("input[name=fuelLevel]");
             let cargoMassInput = document.querySelector("input[name=cargoMass]");*/
-            
-            if (pilotNameInput.value === "" || copilotNameInput.value === "" || fuelLevelInput.value === "" || cargoMassInput.value ===""){
+
+
+            //revisit for form submission
+
+           /* if (pilotNameInput.value === "" || copilotNameInput.value === "" || fuelLevelInput.value === "" || cargoMassInput.value ===""){
                 event.preventDefault();
                 alert("all fields must be filled in");
 
@@ -45,7 +63,8 @@ function validateInput(testInput) {
             }else if(typeof cargoMassInput.value !== 'number'){
                 event.preventDefault();
                 alert("Cargo Mass must be a number");
-            }        
+            }        */
+
         });
     });
    
