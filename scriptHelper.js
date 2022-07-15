@@ -28,7 +28,22 @@ function validateInput(testInput) {
             let cargoMassInput = document.querySelector("input[name=cargoMass");
             if (pilotNameInput.value === " " || copilotNameInput.value === " " || fuelLevelInput.value === " " || cargoMassInput.value ===" "){
                 event.preventDefault();
-            }
+                alert("all fields must be filled in");
+
+            } else if(typeof pilotNameInput.value !== 'string'){
+                event.preventDefault();
+                alert("Pilot name must be a name");
+
+            }else if(typeof copilotNameInput.value !== 'string'){
+                event.preventDefault();
+                alert("Co-Pilot name must be a name");
+            }else if(typeof fuelLevelInput.value !== 'number'){
+                event.preventDefault();
+                alert("Fuel Level must be a number");
+            }else if(typeof cargoMassInput.value !== 'number'){
+                event.preventDefault();
+                alert("Cargo Mass must be a number");
+            }        
         });
     });
    
