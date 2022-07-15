@@ -23,6 +23,7 @@ window.addEventListener("load", function() {
             let copilotNameInput = document.querySelector("input[name=copilotName]");
             let fuelLevelInput = document.querySelector("input[name=fuelLevel]");
             let cargoMassInput = document.querySelector("input[name=cargoMass]");
-            
+            alert('pilotname is:' + pilotNameInput.value);
+        });
    
 });
