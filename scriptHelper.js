@@ -23,10 +23,11 @@ function validateInput(testInput) {
         form.addEventListener("submit", function(event) {
             /*add if statements to validate check each field if info not valid
              use event.preventDefault();*/
-            let pilotNameInput = document.querySelector("input[name=pilotName]");
+            /*let pilotNameInput = document.querySelector("input[name=pilotName]");
             let copilotNameInput = document.querySelector("input[name=copilotName]");
             let fuelLevelInput = document.querySelector("input[name=fuelLevel]");
-            let cargoMassInput = document.querySelector("input[name=cargoMass]");
+            let cargoMassInput = document.querySelector("input[name=cargoMass]");*/
+            
             if (pilotNameInput.value === "" || copilotNameInput.value === "" || fuelLevelInput.value === "" || cargoMassInput.value ===""){
                 event.preventDefault();
                 alert("all fields must be filled in");
