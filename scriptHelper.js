@@ -19,10 +19,12 @@ function addDestinationInfo(document, name, diameter, star, distance, moons, ima
 function validateInput(testInput) {
 
     window.addEventListener("load", function() {
-        let form = document.querySelector("form");
+       let form = document.querySelector("form");
         form.addEventListener("submit", function(event) {
             /*add if statements to validate check each field if info not valid
              use event.preventDefault();*/
+             
+             
              if (testInput = "" ){
                 event.preventDefault();
                 return "Empty";
@@ -71,8 +73,11 @@ function validateInput(testInput) {
 }
 
 function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
+    if (validateInput(pilot) === "Empty"){
+        alert("all fields must be filled in");
+    }
    
-}
+};
 
 async function myFetch() {
     let planetsReturned;
