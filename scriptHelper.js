@@ -16,7 +16,7 @@ function addDestinationInfo(document, name, diameter, star, distance, moons, ima
    */
 }
 
-function validateInput(testInput) {
+function validateInput(testInput, indicator) {
 
     window.addEventListener("load", function() {
        let form = document.querySelector("form");
@@ -30,9 +30,16 @@ function validateInput(testInput) {
                 return "Empty";
 
              }else if ((isNaN(testInput)) ){
+                if (indicator = "N"){
+                    event.preventDefault();
+                }
                 return "Not a Number";
 
              } else {
+                if(indicator = "S"){
+                    event.preventDefault();
+                }
+                
                 return "Is a Number"
              }
 
