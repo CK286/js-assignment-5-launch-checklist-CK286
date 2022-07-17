@@ -1,34 +1,41 @@
 
 
 // Write your JavaScript code here!
-const submitButton = document.getElementById('formSubmit')
+
 
 //const { formSubmission } = require("./scriptHelper");
-//window.addEventListener("load", function() {
-//let form = document.querySelector("form");
-submitButton.addEventListener("click", (event) =>{
-    /*add if statements to validate check each field if info not valid
-     use event.preventDefault();*/
-    let pilotNameInput = document.querySelector("input[name=pilotName]");
-    let copilotNameInput = document.querySelector("input[name=copilotName]");
-    let fuelLevelInput = document.querySelector("input[name=fuelLevel]");
-    let cargoMassInput = document.querySelector("input[name=cargoMass]");
-    //alert to verify data captured REMOVE
-    //alert('pilotname is:' + pilotNameInput.value);
-    //get List from faulty list
-    let list = document.getElementById("faultyItems");
-    formSubmission(document,list,pilotNameInput.value, copilotNameInput.value, fuelLevelInput.value, cargoMassInput.value);
-    
-});
+
+
+
 
 
 
 window.addEventListener("load", function() {
 
+    let form = document.querySelector(form);
+    let submitButton =document.getElementById('formSubmit')
+    submitButton.addEventListener("click", (event) =>
+
+{
+    /*add if statements to validate check each field if info not valid
+     use event.preventDefault();*/
+    let list = document.getElementById("faultyItems");
+    let launchstat = document.getElementById('launchStatus')
+    let pilotNameInput = document.querySelector("input[name=pilotName]");
+    let copilotNameInput = document.querySelector("input[name=copilotName]");
+    let fuelLevelInput = document.querySelector("input[name=fuelLevel]");
+    let cargoMassInput = document.querySelector("input[name=cargoMass]");
+    //alert to verify data captured REMOVE
+    alert('pilotname is:' + pilotNameInput.value);
+    //get List from faulty list
+    
+    formSubmission(document,list,pilotNameInput.value, copilotNameInput.value, fuelLevelInput.value, cargoMassInput.value);
+    
+});
+
    let listedPlanets;
    // Set listedPlanetsResponse equal to the value returned by calling myFetch()
    let listedPlanetsResponse = myFetch();
-   
    listedPlanetsResponse.then(function (result) {
        listedPlanets = result;
        console.log(listedPlanets);
