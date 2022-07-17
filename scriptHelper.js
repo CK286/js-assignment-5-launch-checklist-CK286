@@ -26,18 +26,18 @@ function validateInput(testInput, indicator) {
              
              alert("I am in validateInput" + testInput);
              if (testInput = "" ){
-                event.preventDefault();
+                //event.preventDefault();
                 return "Empty";
 
              }else if ((isNaN(testInput)) ){
                 if (indicator = "N"){
-                    event.preventDefault();
+                    //event.preventDefault();
                 }
                 return "Not a Number";
 
              } else {
                 if(indicator = "S"){
-                    event.preventDefault();
+                   // event.preventDefault();
                 }
                 
                 return "Is a Number"
@@ -90,9 +90,11 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
 };
 
 async function myFetch() {
+  
+
     let planetsReturned;
 
-    planetsReturned = await fetch().then( function(response) {
+    planetsReturned = await fetch('https://handlers.education.launchcode.org/static/planets.json').then( function(response) {
         });
 
     return planetsReturned;

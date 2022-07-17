@@ -1,6 +1,25 @@
+
+
 // Write your JavaScript code here!
 
 //const { formSubmission } = require("./scriptHelper");
+
+let form = document.querySelector("form");
+form.addEventListener("submit", function(event) {
+    /*add if statements to validate check each field if info not valid
+     use event.preventDefault();*/
+    let pilotNameInput = document.querySelector("input[name=pilotName]");
+    let copilotNameInput = document.querySelector("input[name=copilotName]");
+    let fuelLevelInput = document.querySelector("input[name=fuelLevel]");
+    let cargoMassInput = document.querySelector("input[name=cargoMass]");
+    //alert to verify data captured REMOVE
+    //alert('pilotname is:' + pilotNameInput.value);
+    //get List from faulty list
+    let list = document.getElementById("faultyItems");
+    formSubmission(document,list,pilotNameInput.value, copilotNameInput.value, fuelLevelInput.value, cargoMassInput.value);
+    
+});
+
 
 window.addEventListener("load", function() {
 
@@ -17,18 +36,5 @@ window.addEventListener("load", function() {
 
 
 
-   let form = document.querySelector("form");
-        form.addEventListener("submit", function(event) {
-            /*add if statements to validate check each field if info not valid
-             use event.preventDefault();*/
-            let pilotNameInput = document.querySelector("input[name=pilotName]");
-            let copilotNameInput = document.querySelector("input[name=copilotName]");
-            let fuelLevelInput = document.querySelector("input[name=fuelLevel]");
-            let cargoMassInput = document.querySelector("input[name=cargoMass]");
-            //alert to verify data captured REMOVE
-            //alert('pilotname is:' + pilotNameInput.value);
-            formSubmission("x","x",pilotNameInput.value, copilotNameInput.value, fuelLevelInput.value, cargoMassInput.value);
-            
-        });
-   
+  
 });
