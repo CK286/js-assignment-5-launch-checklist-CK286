@@ -24,7 +24,7 @@ function validateInput(testInput, indicator) {
             /*add if statements to validate check each field if info not valid
              use event.preventDefault();*/
              
-             
+             alert("I am in validateInput" + testInput);
              if (testInput = "" ){
                 event.preventDefault();
                 return "Empty";
@@ -80,10 +80,13 @@ function validateInput(testInput, indicator) {
 }
 
 function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
-    if (validateInput(pilot) === "Empty"){
+   // alert("pilot is " + pilot);
+    if (validateInput(pilot, "S") === "Empty" || validateInput(copilot, "S") === "Empty" || validateInput(fuelLevel, "N") === "Empty" || validateInput(cargoLevel, "N") === "Empty")
+    {
         alert("all fields must be filled in");
     }
-   
+    /*}else if()*/
+    
 };
 
 async function myFetch() {

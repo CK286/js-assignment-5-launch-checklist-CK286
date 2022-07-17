@@ -1,5 +1,7 @@
 // Write your JavaScript code here!
 
+//const { formSubmission } = require("./scriptHelper");
+
 window.addEventListener("load", function() {
 
    let listedPlanets;
@@ -24,7 +26,8 @@ window.addEventListener("load", function() {
             let fuelLevelInput = document.querySelector("input[name=fuelLevel]");
             let cargoMassInput = document.querySelector("input[name=cargoMass]");
             //alert to verify data captured REMOVE
-            alert('pilotname is:' + pilotNameInput.value);
+            //alert('pilotname is:' + pilotNameInput.value);
+            formSubmission("x","x",pilotNameInput.value, copilotNameInput.value, fuelLevelInput.value, cargoMassInput.value);
             
         });
    
