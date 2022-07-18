@@ -17,7 +17,7 @@ window.addEventListener("load", function() {
     submitButton.addEventListener("click", (event) =>
 
 {
-    event.preventDefault();
+
     /*add if statements to validate check each field if info not valid
      use event.preventDefault();*/
     let list =[]

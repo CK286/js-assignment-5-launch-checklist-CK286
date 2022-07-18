@@ -1,11 +1,11 @@
 // Write your helper functions here!
-require('isomorphic-fetch');
+//require('isomorphic-fetch');
 
 function addDestinationInfo(document, name, diameter, star, distance, moons, imageUrl) {
    // Here is the HTML formatting for our mission target div.
 
    const destination = document.getElementById('missionTarget');
-destination.addEventListener("submit",function(){
+    destination.addEventListener("submit",function(){
    destination.innerHtml= `
    
                 <h2>Mission Destination</h2>
@@ -19,7 +19,7 @@ destination.addEventListener("submit",function(){
                 <img src="${imageUrl}">`
    
 });
-}
+};
 
 function validateInput(testInput) {
     //let statusMyStr="Empty";
