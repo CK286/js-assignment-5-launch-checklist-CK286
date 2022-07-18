@@ -101,6 +101,14 @@ async function myFetch() {
 //}
 
 function pickPlanet(planets) {
+   let upper = planets.length;
+   function getRandomInt(min,max){
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max-min)+ min);
+   }
+  let i = getRandomInt(0,upper);
+  
 }
 
 module.exports.addDestinationInfo = addDestinationInfo;
