@@ -33,9 +33,7 @@ function validateInput(testInput) {
                 return "Not a Number";
 
              } else {
-                if(indicator = "S"){
-                   
-                }
+            
                 
                 return "Is a Number"
              }
@@ -49,7 +47,7 @@ function validateInput(testInput) {
 
 
 function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
-   // alert("pilot is " + pilot);
+   
    let good = "true";
 
    

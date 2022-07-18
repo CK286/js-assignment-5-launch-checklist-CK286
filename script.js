@@ -12,8 +12,8 @@
 
 window.addEventListener("load", function() {
 
-    let form = document.querySelector(form);
-    let submitButton =document.getElementById('formSubmit')
+    let form = document.querySelector('form');
+    let submitButton = document.getElementById('formSubmit')
     submitButton.addEventListener("click", (event) =>
 
 {
@@ -32,7 +32,8 @@ window.addEventListener("load", function() {
     alert('pilotname is:' + pilotNameInput.value);
     //get List from faulty list
     if (!formSubmission(document,list,pilotNameInput.value, copilotNameInput.value, fuelLevelInput.value, cargoMassInput.value)){
-        
+
+        event.preventDefault();
     }
     
     formSubmission(document,list,pilotNameInput.value, copilotNameInput.value, fuelLevelInput.value, cargoMassInput.value);
