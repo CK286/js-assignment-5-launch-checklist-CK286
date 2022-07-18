@@ -107,8 +107,10 @@ function pickPlanet(planets) {
     max = Math.floor(max);
     return Math.floor(Math.random() * (max-min)+ min);
    }
-  let i = getRandomInt(0,upper);
-  
+  let i = getRandomInt(0,upper); 
+  let planet = planets[i];
+  console.log(planet);
+
 }
 
 module.exports.addDestinationInfo = addDestinationInfo;
