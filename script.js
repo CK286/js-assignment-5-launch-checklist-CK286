@@ -19,7 +19,10 @@ window.addEventListener("load", function() {
 {
     /*add if statements to validate check each field if info not valid
      use event.preventDefault();*/
-    let list = document.getElementById("faultyItems");
+    let list =[]
+
+    
+    //let list = document.getElementById("faultyItems");
     let launchstat = document.getElementById('launchStatus')
     let pilotNameInput = document.querySelector("input[name=pilotName]");
     let copilotNameInput = document.querySelector("input[name=copilotName]");
@@ -28,6 +31,9 @@ window.addEventListener("load", function() {
     //alert to verify data captured REMOVE
     alert('pilotname is:' + pilotNameInput.value);
     //get List from faulty list
+    if (!formSubmission(document,list,pilotNameInput.value, copilotNameInput.value, fuelLevelInput.value, cargoMassInput.value)){
+        
+    }
     
     formSubmission(document,list,pilotNameInput.value, copilotNameInput.value, fuelLevelInput.value, cargoMassInput.value);
     
