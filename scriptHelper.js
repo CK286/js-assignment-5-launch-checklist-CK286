@@ -74,18 +74,25 @@ async function myFetch() {
   
 
     let planetsReturned;
+    
+    const response = await fetch('https://handlers.education.launchcode.org/static/planets.json');
+    planetsReturned = await response.json();
+    //return movies;
 
-    planetsReturned = await fetch('https://handlers.education.launchcode.org/static/planets.json').then(function(response) {
-        response.json().then( function(json){
-            console.log (json);
-        });
+
+   // planetsReturned = await fetch('https://handlers.education.launchcode.org/static/planets.json').then(function(response) {
+       // response.json().then( function(json){
+           // planetsReturned = json;
+          //  console.log ("from myFetch" + planetsReturned);
+           
+       // });
         
 
             return planetsReturned;
         }
-);
+//);
 
-}
+//}
 
 function pickPlanet(planets) {
 }
