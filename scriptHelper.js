@@ -19,6 +19,7 @@ destination.addEventListener("submit",function(){
                 <img src="${imageUrl}">`
    
 });
+}
 
 function validateInput(testInput) {
     //let statusMyStr="Empty";
