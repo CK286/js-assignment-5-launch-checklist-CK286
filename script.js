@@ -28,8 +28,8 @@ window.addEventListener("load", function() {
     let copilotNameInput = document.querySelector("input[name=copilotName]");
     let fuelLevelInput = document.querySelector("input[name=fuelLevel]");
     let cargoMassInput = document.querySelector("input[name=cargoMass]");
-    //alert to verify data captured REMOVE
-    alert('pilotname is:' + pilotNameInput.value);
+    
+   
     //get List from faulty list
     if (!formSubmission(document,list,pilotNameInput.value, copilotNameInput.value, fuelLevelInput.value, cargoMassInput.value)){
 

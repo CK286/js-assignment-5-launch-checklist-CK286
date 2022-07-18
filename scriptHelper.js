@@ -22,9 +22,9 @@ function validateInput(testInput) {
 
 
         
-        //alert("I am in validateInput" + testInput);
+        
 
-             if (testInput = "" ){
+             if (testInput.length == 0){
             
                 return "Empty";
 
@@ -61,7 +61,13 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
         list.push ("Pilot should be a string");
     }
 
-    if(validateInput(fuelLevel) ==="Is a Number");
+    if(validateInput(Number(fuelLevel)) ==="Not a Number");
+      {
+
+        good = "false";
+        list.push ("Fuel Level must be a number");
+    }
+    if(validateInput(Number(cargoLevel)) ==="Not a Number");
       {
 
         good = "false";
