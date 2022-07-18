@@ -22,7 +22,7 @@ function validateInput(testInput) {
 
 
         
-        alert("I am in validateInput" + testInput);
+        //alert("I am in validateInput" + testInput);
 
              if (testInput = "" ){
             
@@ -76,10 +76,10 @@ async function myFetch() {
     let planetsReturned;
 
     planetsReturned = await fetch('https://handlers.education.launchcode.org/static/planets.json').then( function(response) {
-        response.json().then});
+        response.json().then(function(json){
 
     return planetsReturned;
-}
+});
 
 function pickPlanet(planets) {
 }
