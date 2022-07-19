@@ -33,7 +33,7 @@ function validateInput(testInput) {
             
                 return "Empty";
 
-             }else if (typeof Number(testInput)== "number"){
+             }else if (typeof testInput == "number"){
                 
                 return "Is a Number"
 
@@ -63,6 +63,11 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
         event.preventDefault();
     } 
     if(validateInput(pilot) ==="Is a Number"){
+        good = "false";
+        alert("Pilot should be a string");
+        event.preventDefault();
+    }
+    if(validateInput(copilot) ==="Is a Number"){
         good = "false";
         alert("Pilot should be a string");
         event.preventDefault();
