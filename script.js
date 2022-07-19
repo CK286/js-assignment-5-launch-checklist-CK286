@@ -13,17 +13,18 @@
 window.addEventListener("load", function() {
 
     let form = document.querySelector('form');
+    //move to form submission
+
     let submitButton = document.getElementById('formSubmit')
     submitButton.addEventListener("click", (event) =>
 
 {
-
     /*add if statements to validate check each field if info not valid
      use event.preventDefault();*/
-    let list =[]
+    
 
     
-    //let list = document.getElementById("faultyItems");
+    let list = document.getElementById("faultyItems");
     let launchstat = document.getElementById('launchStatus')
     let pilotNameInput = document.querySelector("input[name=pilotName]");
     let copilotNameInput = document.querySelector("input[name=copilotName]");
@@ -32,11 +33,8 @@ window.addEventListener("load", function() {
     
    
     //get List from faulty list
-    if (!formSubmission(document,list,pilotNameInput.value, copilotNameInput.value, fuelLevelInput.value, cargoMassInput.value)){
-
-        event.preventDefault();
-    }
     
+    //move after listed planets
     formSubmission(document,list,pilotNameInput.value, copilotNameInput.value, fuelLevelInput.value, cargoMassInput.value);
     
 });
@@ -58,13 +56,12 @@ window.addEventListener("load", function() {
        let star = planet.star;
        let distance = planet.distance;
        let moons = planet.moons;
-       let imageUrl = planet.imageUrl;
+       let imageUrl = planet.image;
 
-       addDestinationInfo(document, name, diameter, star, distance, moons, imageUrl)
-   
+       addDestinationInfo(document, name, diameter, star, distance, moons, imageUrl);
     })
 
-
-
-  
+        
+   
+    
 });

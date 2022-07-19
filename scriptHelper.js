@@ -33,14 +33,14 @@ function validateInput(testInput) {
             
                 return "Empty";
 
-             }else if (isNaN(testInput)){
+             }else if (typeof Number(testInput)== "number"){
                 
-                return "Not a Number";
+                return "Is a Number"
 
              } else {
             
                 
-                return "Is a Number"
+                return "Not a Number"
              }
 
 
@@ -60,23 +60,25 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
     {
         alert("all fields must be filled in");
         good = "false";
+        event.preventDefault();
     } 
     if(validateInput(pilot) ==="Is a Number"){
         good = "false";
-        list.push ("Pilot should be a string");
+        alert("Pilot should be a string");
+        event.preventDefault();
     }
 
     if(validateInput(Number(fuelLevel)) ==="Not a Number");
       {
 
         good = "false";
-        list.push ("Fuel Level must be a number");
+        alert("Fuel Level must be a number");
     }
     if(validateInput(Number(cargoLevel)) ==="Not a Number");
       {
 
         good = "false";
-        list.push ("Fuel Level must be a number");
+        alert ("Fuel Level must be a number");
     }
     return good;
 };
