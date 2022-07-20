@@ -5,7 +5,7 @@ function addDestinationInfo(document, name, diameter, star, distance, moons, ima
    // Here is the HTML formatting for our mission target div.
 
    const destination = document.getElementById('missionTarget');
-    destination.addEventListener("click",function(){
+    //destination.addEventListener("click",function(){
    destination.innerHTML = `
    
                 <h2>Mission Destination</h2>
@@ -18,7 +18,7 @@ function addDestinationInfo(document, name, diameter, star, distance, moons, ima
                 </ol>
                 <img src="${imageUrl}">`
    
-});
+//});
 };
 
 function validateInput(testInput) {
