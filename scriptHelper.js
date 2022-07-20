@@ -92,14 +92,25 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
 }
 if (good = "true")
 {
-    //const faulty = document.getElementById('faultyItems');
+    const launchStat = document.getElementById('launchStatus');
     //test if ready to Launch
     if (fuelLevel >= 10000 && cargoLevel<=10000){
-        const launchStat = document.getElementById('launchStatus');
+       
         launchStat.style.color = "green";
         launchStat.innerHTML = `
    
                 <h2>"Shuttle is ready for launch"</h2>`
+
+    }else if (fuelLevel < 10000){
+        launchStat.style.color = "red";
+        launchStat.innerHTML = `
+   
+                <h2>"Shuttle not ready for launch"</h2>`
+
+        const faulty = document.getElementById('faultyItems');
+        //make it visible
+        faulty.style.visibility = "visible";
+
 
     }
 };
