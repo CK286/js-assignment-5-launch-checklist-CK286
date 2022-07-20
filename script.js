@@ -30,12 +30,16 @@ window.addEventListener("load", function() {
     let copilotNameInput = document.querySelector("input[name=copilotName]");
     let fuelLevelInput = document.querySelector("input[name=fuelLevel]");
     let cargoMassInput = document.querySelector("input[name=cargoMass]");
+    let fuelLevel = Number(fuelLevelInput);
+    //console.log(typeof fuelLevel);
     
+    let cargoMass = Number(cargoMassInput);
+    //console.log(typeof cargoMass);
    
   
     
     //move after listed planets
-    formSubmission(document, list, pilotNameInput.value, copilotNameInput.value, fuelLevelInput.value, cargoMassInput.value);
+    formSubmission(document, list, pilotNameInput.value, copilotNameInput.value, fuelLevel, cargoMass);
     
 });
 
