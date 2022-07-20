@@ -110,6 +110,18 @@ if (good = "true")
         const faulty = document.getElementById('faultyItems');
         //make it visible
         faulty.style.visibility = "visible";
+        faulty.innerHTML = `
+   
+                
+                <ol>
+                    <li>Pilot ${pilot} is ready for launch.</li>
+                    <li>Copilot ${copilot} is ready for launch.</li>
+                    <li>Fuel level is too low for launch.</li>
+                    <li>Cargo mass low enough for launch. </li>
+                    
+                </ol>`
+               
+   
 
 
     }
