@@ -25,7 +25,8 @@ function validateInput(testInput) {
     //let statusMyStr="Empty";
     
 
-
+// note to self: step through with debugger fuel level/cargoMass has type of number
+ 
         
         
 
@@ -37,9 +38,8 @@ function validateInput(testInput) {
                 
                 return "Is a Number"
 
-             } else {
-            
-                
+             } else if (typeof testInput == "string"){
+        
                 return "Not a Number"
              }
 
@@ -64,24 +64,24 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
         event.preventDefault();
     } else{
     
-    if(validateInput(pilot) === "Is a Number"){
+    if(validateInput(pilot) == "Is a Number"){
         good = "false";
         alert("Pilot should be a string");
         event.preventDefault();
     }
-    if(validateInput(copilot) === "Is a Number"){
+    if(validateInput(copilot) == "Is a Number"){
         good = "false";
         alert("Pilot should be a string");
         event.preventDefault();
     }
 
-    if(validateInput(Number(fuelLevel)) ==="Not a Number");
+    if(validateInput(fuelLevel) == "Not a Number");
       {
 
         good = "false";
         alert("Fuel Level must be a number");
     }
-    if(validateInput(Number(cargoLevel)) ==="Not a Number");
+    if(validateInput(cargoLevel) === "Not a Number");
       {
 
         good = "false";
