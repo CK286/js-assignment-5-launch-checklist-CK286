@@ -85,7 +85,7 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
       {
 
         good = "false";
-        alert ("Fuel Level must be a number");
+        alert ("Cargo Level must be a number");
  
     }
    
