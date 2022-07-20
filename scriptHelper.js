@@ -6,7 +6,7 @@ function addDestinationInfo(document, name, diameter, star, distance, moons, ima
 
    const destination = document.getElementById('missionTarget');
     destination.addEventListener("click",function(){
-   destination.innerHtML = `
+   destination.innerHTML = `
    
                 <h2>Mission Destination</h2>
                 <ol>
