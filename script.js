@@ -21,7 +21,7 @@ window.addEventListener("load", function() {
 {
     /*add if statements to validate check each field if info not valid
      use event.preventDefault();*/
-    
+     event.preventDefault();
 
     //get List from faulty list
     let list = document.getElementById("faultyItems");
@@ -35,7 +35,7 @@ window.addEventListener("load", function() {
   
     
     //move after listed planets
-    formSubmission(document,list,pilotNameInput.value, copilotNameInput.value, fuelLevelInput.value, cargoMassInput.value);
+    formSubmission(document, list, pilotNameInput.value, copilotNameInput.value, fuelLevelInput.value, cargoMassInput.value);
     
 });
 

@@ -55,7 +55,7 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
    
    let good = "true";
  //test to view fuelLevel and cargoMass
- alert("Fuel level is " + typeof fuelLevel /n +"Cargo Level is "+ typeof cargoLevel);
+ //alert("Fuel level is " + typeof fuelLevel /n +"Cargo Level is "+ typeof cargoLevel);
    
    if (validateInput(pilot) === "Empty" || validateInput(copilot) === "Empty" || validateInput(fuelLevel) === "Empty" || validateInput(cargoLevel) === "Empty")
     {
@@ -64,12 +64,12 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
         event.preventDefault();
     } else{
     
-    if(validateInput(pilot) ==="Is a Number"){
+    if(validateInput(pilot) === "Is a Number"){
         good = "false";
         alert("Pilot should be a string");
         event.preventDefault();
     }
-    if(validateInput(copilot) ==="Is a Number"){
+    if(validateInput(copilot) === "Is a Number"){
         good = "false";
         alert("Pilot should be a string");
         event.preventDefault();
