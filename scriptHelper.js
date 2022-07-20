@@ -40,7 +40,7 @@ function validateInput(testInput) {
 
              } else if (typeof testInput == "string"){
                 //console.log(typeof testInput + testInput + "Not a Number");
-                return "Not a Number"
+                return "Not a Number";
              }
 
 
@@ -90,8 +90,20 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
     }
    
 }
-return good;
+if (good = "true")
+{
+    //const faulty = document.getElementById('faultyItems');
+    //test if ready to Launch
+    if (fuelLevel >= 10000 && cargoLevel<=10000){
+        const launchStat = document.getElementById('launchStatus');
+        launchStat.style.color = "green";
+        launchStat.innerHTML = `
+   
+                <h2>"Shuttle is ready for launch"</h2>`
+
+    }
 };
+}
 
 async function myFetch() {
   
