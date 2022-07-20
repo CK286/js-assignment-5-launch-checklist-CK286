@@ -6,7 +6,7 @@ function addDestinationInfo(document, name, diameter, star, distance, moons, ima
 
    const destination = document.getElementById('missionTarget');
     destination.addEventListener("click",function(){
-   destination.innerHtml= `
+   destination.innerHtML = `
    
                 <h2>Mission Destination</h2>
                 <ol>
@@ -100,8 +100,7 @@ async function myFetch() {
     
     const response = await fetch('https://handlers.education.launchcode.org/static/planets.json');
     planetsReturned = await response.json();
-    //return movies;
-
+    
 
    // planetsReturned = await fetch('https://handlers.education.launchcode.org/static/planets.json').then(function(response) {
        // response.json().then( function(json){

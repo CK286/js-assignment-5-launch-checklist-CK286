@@ -23,7 +23,7 @@ window.addEventListener("load", function() {
      use event.preventDefault();*/
     
 
-    
+    //get List from faulty list
     let list = document.getElementById("faultyItems");
     let launchstat = document.getElementById('launchStatus')
     let pilotNameInput = document.querySelector("input[name=pilotName]");
@@ -32,7 +32,7 @@ window.addEventListener("load", function() {
     let cargoMassInput = document.querySelector("input[name=cargoMass]");
     
    
-    //get List from faulty list
+  
     
     //move after listed planets
     formSubmission(document,list,pilotNameInput.value, copilotNameInput.value, fuelLevelInput.value, cargoMassInput.value);
