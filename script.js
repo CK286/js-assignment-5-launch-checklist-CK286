@@ -30,11 +30,11 @@ window.addEventListener("load", function() {
     let copilotNameInput = document.querySelector("input[name=copilotName]");
     let fuelLevelInput = document.querySelector("input[name=fuelLevel]");
     let cargoMassInput = document.querySelector("input[name=cargoMass]");
-    let fuelLevel = Number(fuelLevelInput);
-    //console.log(typeof fuelLevel);
+    let fuelLevel = Number(fuelLevelInput.value);
+    console.log(fuelLevel);
     
-    let cargoMass = Number(cargoMassInput);
-    //console.log(typeof cargoMass);
+    let cargoMass = Number(cargoMassInput.value);
+    console.log(cargoMass + typeof cargoMass + "fresh");
    
   
     

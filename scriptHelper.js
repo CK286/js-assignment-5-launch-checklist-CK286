@@ -35,11 +35,11 @@ function validateInput(testInput) {
                 return "Empty";
 
              }else if (typeof testInput == "number"){
-                
+                //console.log(typeof testInput + testInput + "Is a Number");
                 return "Is a Number"
 
              } else if (typeof testInput == "string"){
-        
+                //console.log(typeof testInput + testInput + "Not a Number");
                 return "Not a Number"
              }
 
@@ -52,10 +52,10 @@ function validateInput(testInput) {
 
 
 function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
-   
+   console.log(pilot, copilot, fuelLevel, cargoLevel);
    let good = "true";
  //test to view fuelLevel and cargoMass
- //alert("Fuel level is " + typeof fuelLevel /n +"Cargo Level is "+ typeof cargoLevel);
+
    
    if (validateInput(pilot) === "Empty" || validateInput(copilot) === "Empty" || validateInput(fuelLevel) === "Empty" || validateInput(cargoLevel) === "Empty")
     {
@@ -75,13 +75,13 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
         event.preventDefault();
     }
 
-    if(validateInput(fuelLevel) == "Not a Number");
+    if(validateInput(fuelLevel) == "Not a Number")
       {
 
         good = "false";
         alert("Fuel Level must be a number");
     }
-    if(validateInput(cargoLevel) === "Not a Number");
+    if(validateInput(cargoLevel) === "Not a Number")
       {
 
         good = "false";
