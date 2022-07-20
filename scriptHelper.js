@@ -101,7 +101,8 @@ if (good = "true")
    
                 <h2>"Shuttle is ready for launch"</h2>`
 
-    }else if (fuelLevel < 10000){
+    }else if (fuelLevel < 10000 && cargoLevel > 10000){
+        //both bad
         launchStat.style.color = "red";
         launchStat.innerHTML = `
    
@@ -117,13 +118,53 @@ if (good = "true")
                     <li>Pilot ${pilot} is ready for launch.</li>
                     <li>Copilot ${copilot} is ready for launch.</li>
                     <li>Fuel level is too low for launch.</li>
-                    <li>Cargo mass low enough for launch. </li>
+                    <li>Cargo mass is too high for launch. </li>
                     
                 </ol>`
                
    
 
 
+    }else if(fuelLevel >= 10000 && cargoLevel > 10000){
+        //cargo bad
+        launchStat.style.color = "red";
+        launchStat.innerHTML = `
+   
+                <h2>"Shuttle not ready for launch"</h2>`
+
+        const faulty = document.getElementById('faultyItems');
+        //make it visible
+        faulty.style.visibility = "visible";
+        faulty.innerHTML = `
+   
+                
+                <ol>
+                    <li>Pilot ${pilot} is ready for launch.</li>
+                    <li>Copilot ${copilot} is ready for launch.</li>
+                    <li>Fuel level high enough for launch.</li>
+                    <li>Cargo mass is too high for launch. </li>
+                    
+                </ol>`
+    }else if (fuelLevel < 10000 && cargoLevel<=10000){
+        //fuel bad
+        launchStat.style.color = "red";
+        launchStat.innerHTML = `
+   
+                <h2>"Shuttle not ready for launch"</h2>`
+
+        const faulty = document.getElementById('faultyItems');
+        //make it visible
+        faulty.style.visibility = "visible";
+        faulty.innerHTML = `
+   
+                
+                <ol>
+                    <li>Pilot ${pilot} is ready for launch.</li>
+                    <li>Copilot ${copilot} is ready for launch.</li>
+                    <li>Fuel level  is too low for launch.</li>
+                    <li>Cargo mass is low enough for launch. </li>
+                    
+                </ol>`
     }
 };
 }
